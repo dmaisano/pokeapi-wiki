@@ -1,4 +1,10 @@
-@import './tailwind.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-link {
+  @apply text-indigo-500 underline cursor-pointer;
+}
 
 html,
 body {
