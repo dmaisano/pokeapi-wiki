@@ -4,6 +4,17 @@ module.exports = {
   separator: ':',
   theme: {
     customForms: theme => ({
+      default: {
+        'input, textarea': {
+          borderRadius: theme('borderRadius.lg'),
+          backgroundColor: theme('colors.white'),
+          '&:focus': {
+            outline: 'none',
+            boxShadow: 'none',
+            borderColor: 'transparent',
+          },
+        },
+      },
       dark: {
         'input, textarea, multiselect, checkbox, radio': {
           backgroundColor: theme('colors.gray.900'),
@@ -455,6 +466,7 @@ module.exports = {
     borderStyle: ['responsive'],
     borderWidth: ['responsive'],
     boxShadow: ['responsive', 'hover', 'focus'],
+    colors: ['placeholder'],
     cursor: ['responsive'],
     display: ['responsive'],
     fill: ['responsive'],

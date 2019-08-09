@@ -25,9 +25,14 @@ export default class PokemonSearch extends React.Component<
     const { pokemonName } = this.state;
 
     return (
-      <form>
-        <label className="block">{/*  */}</label>
-      </form>
+      <label className="w-full inline-flex items-center">
+        <input
+          type="text"
+          className="form-input placeholder-gray-700 w-full rounded-r-none"
+          placeholder="Search by Pokemon name"
+        />
+        <button className="btn btn-primary rounded-l-none">Search</button>
+      </label>
     );
   }
 }
