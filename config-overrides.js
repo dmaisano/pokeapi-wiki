@@ -1,4 +1,4 @@
-const { override, addPostcssPlugins } = require('customize-cra');
+const { override, addPostcssPlugins, disableEsLint } = require('customize-cra');
 const tailwind = require('tailwindcss');
 const purgecss = require('@fullhuman/postcss-purgecss');
 const { join } = require('path');
@@ -12,6 +12,8 @@ const purgecssConfig = purgecss({
 });
 
 module.exports = override(
+  disableEsLint(),
+
   addPostcssPlugins([
     tailwind(join(__dirname, './tailwind.config.js')),
     require('postcss-nested'),
